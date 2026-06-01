@@ -2,7 +2,7 @@ const footerHTML = `
   <footer class="section-footer">
       <div class="footer-container container">
         <div class="content_1">
-          <img src="./images/logo.jpeg" alt="logo" />
+          <img src="./public/images/logo.jpeg" alt="logo" />
           <p>
             Welcome to Tech EcomStore, your ultimate destination for
             cutting-edge gadgets!
@@ -35,7 +35,7 @@ const footerHTML = `
       </div>
       <div class="f-design">
         <div class="f-design-txt">
-          <p>Design and Code by Tech Technical</p>
+          <p>Design and Code by TechStore</p>
         </div>
       </div>
     </footer>`;
