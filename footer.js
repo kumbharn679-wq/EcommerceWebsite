@@ -2,7 +2,11 @@ const footerHTML = `
   <footer class="section-footer">
       <div class="footer-container container">
         <div class="content_1">
+<<<<<<< HEAD
           <img src="./public/images/logo.jpeg" alt="logo" />
+=======
+          <img src=".public/images/logo.jpeg" alt="logo" />
+>>>>>>> 00adab0 (Updated Footer component)
           <p>
             Welcome to Tech EcomStore, your ultimate destination for
             cutting-edge gadgets!
