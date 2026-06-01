@@ -1,5 +1,6 @@
 import { getCartProductFormLS } from "./getCartProducts";
 import { updateCartProductTotal } from "./updateCartProductTotal";
+<<<<<<< HEAD
 
 export const incrementDecrement =(event,stock,id,price) =>{  
  const currentCardElement = document.querySelector(`#card${id}`); 
@@ -11,6 +12,22 @@ export const incrementDecrement =(event,stock,id,price) =>{
  //**_________________ Get  the data from localStorage________________
 let localCartProduct = getCartProductFormLS(); 
 let existingProd = localCartProduct.find((curProd) => curProd.id === id);  
+=======
+ 
+export const incrementDecrement =(event,stock,id,price) =>{ 
+ const currentCardElement = document.querySelector(`#card${id}`);
+
+ 
+ const productQuantity = currentCardElement.querySelector(".productQuantity"); 
+ 
+ const productPrice = currentCardElement.querySelector(".productPrice");
+ let quantity = 1;
+
+ let localStoragePrice  = 0;
+ //**_________________ Get  the data from localStorage________________
+let localCartProduct = getCartProductFormLS(); 
+let existingProd = localCartProduct.find((curProd) => curProd.id === id);
+>>>>>>> 2808469de8c649a25664f26f3e4d48f9b5bc8a50
  if(existingProd){
     quantity = existingProd.quantity;
     localStoragePrice = existingProd.price;
@@ -38,10 +55,20 @@ let existingProd = localCartProduct.find((curProd) => curProd.id === id);
     localStoragePrice = price * quantity;
     let updatedCart = { id,quantity,price:localStoragePrice};
    updatedCart = localCartProduct.map((curProd) => {
+<<<<<<< HEAD
     return (curProd.id === id) ? updatedCart : curProd; 
    })
   localStorage.setItem("cartProductLS", JSON.stringify(updatedCart));
 
+=======
+    return (curProd.id === id) ? updatedCart : curProd;
+   })
+  localStorage.setItem("cartProductLS", JSON.stringify(updatedCart));
+
+
+    productQuantity.innerText = quantity; 
+    productPrice.innerText = localStoragePrice; 
+>>>>>>> 2808469de8c649a25664f26f3e4d48f9b5bc8a50
 
     productQuantity.innerText = quantity; 
     productPrice.innerText = localStoragePrice; 

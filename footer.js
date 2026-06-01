@@ -3,10 +3,14 @@ const footerHTML = `
       <div class="footer-container container">
         <div class="content_1">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <img src="./public/images/logo.jpeg" alt="logo" />
 =======
           <img src=".public/images/logo.jpeg" alt="logo" />
 >>>>>>> 00adab0 (Updated Footer component)
+=======
+          <img src=".public/images/logo.jpeg" alt="logo" />
+>>>>>>> 2808469de8c649a25664f26f3e4d48f9b5bc8a50
           <p>
             Welcome to Tech EcomStore, your ultimate destination for
             cutting-edge gadgets!
