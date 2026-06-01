@@ -41,7 +41,7 @@ let existingProd = localCartProduct.find((curProd) => curProd.id === id);
     return (curProd.id === id) ? updatedCart : curProd; 
    })
   localStorage.setItem("cartProductLS", JSON.stringify(updatedCart));
-    //also we need to feflect the changes on thescreen too5
+
 
     productQuantity.innerText = quantity; 
     productPrice.innerText = localStoragePrice; 
