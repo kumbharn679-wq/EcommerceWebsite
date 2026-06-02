@@ -1,5 +1,6 @@
 import { getCartProductFormLS } from "./getCartProducts.js";
 import { showToast } from "./showToast.js";
+import { updateCartProductTotal } from "./updateCartProductTotal.js";
 import { updateCartValues } from "./updateCartValue.js";
 
 export const  removeProdFromCart =(id ) => {
@@ -16,7 +17,8 @@ export const  removeProdFromCart =(id ) => {
         showToast("delete",id);
 
      }
-   
+
+      updateCartProductTotal();
       updateCartValues(cartProducts);
      
 

@@ -26,7 +26,7 @@ let existingProd = localCartProduct.find((curProd) => curProd.id === id);
  }else if (quantity === stock){
     quantity = stock; 
     localStoragePrice = price * stock ;
-    localStoragePrice =Number(localCartPrice.toFixed(2));
+   //  localStoragePrice =Number(localCartPrice.toFixed(2));
  }
  }
   if((event.target.className === "cartDecrement")){ 
@@ -36,6 +36,7 @@ let existingProd = localCartProduct.find((curProd) => curProd.id === id);
  }
  //_______________ finally we will update thh price in localStorage____________
     localStoragePrice = price * quantity;
+     localStoragePrice = Number(localStoragePrice.toFixed(2));
     let updatedCart = { id,quantity,price:localStoragePrice};
    updatedCart = localCartProduct.map((curProd) => {
     return (curProd.id === id) ? updatedCart : curProd; 
@@ -43,6 +44,7 @@ let existingProd = localCartProduct.find((curProd) => curProd.id === id);
   localStorage.setItem("cartProductLS", JSON.stringify(updatedCart));
 
 
+    const productQuantity = currentCardElement.querySelector(".productQuantity");
     productQuantity.innerText = quantity; 
     productPrice.innerText = localStoragePrice; 
     //Calculating the card total in our cartProducts page

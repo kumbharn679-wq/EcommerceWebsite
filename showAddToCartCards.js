@@ -35,19 +35,20 @@ const templateContainer = document.querySelector("#productCartTemplate");
     productClone.querySelector(".productQuantity").textContent = lsActualData.quantity;
    productClone.querySelector(".productPrice").textContent = lsActualData.price;
     
-   productClone.querySelector(".remove-to-cart-button").addEventListener("click", () => 
-        removeProdFromCart(id)); 
+   // handle increment and decrement button
+    productClone
+      .querySelector(".stockElement")
+      .addEventListener("click", (event) => {
+        incrementDecrement(event, id, stock, price);
+      });
 
-      
+    productClone
+      .querySelector(".remove-to-cart-button")
+      .addEventListener("click", () => removeProdFromCart(id));
 
-   
- // handle increment and decrement button in the cart 
- productClone.querySelector(".stockElement").addEventListener("click",(event) => {
-   incrementDecrement(event,stock,id,price);
+    cartElement.appendChild(productClone);
+
  });
-   cartElement.appendChild(productClone);
-
- })
    
 
  };
