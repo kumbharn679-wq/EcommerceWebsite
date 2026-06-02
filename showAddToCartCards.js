@@ -20,11 +20,7 @@ const cartElement = document.querySelector("#productCartContainer");
 const templateContainer = document.querySelector("#productCartTemplate");
 
  const showCartProduct = () => { 
-<<<<<<< HEAD
-    filterProducts.forEach((curProd) => { 
-=======
-    filterProducts.forEach((curProd) => {
->>>>>>> 2808469de8c649a25664f26f3e4d48f9b5bc8a50
+filterProducts.forEach((curProd) => {
         const {  category, id, image, name, stock, price} = curProd;
        let productClone = document.importNode(templateContainer.content, true);
     let lsActualData  = fetchQuantityFromCartLS(id, price); 
@@ -32,11 +28,7 @@ const templateContainer = document.querySelector("#productCartTemplate");
        productClone.querySelector("#cardValue").setAttribute("id", `card${id}`);
 
     productClone.querySelector(".category").textContent = category;
-<<<<<<< HEAD
-    productClone.querySelector(".productName").textContent = name;
-=======
     productClone.querySelector(".productName").textContent = name; 
->>>>>>> 2808469de8c649a25664f26f3e4d48f9b5bc8a50
     productClone.querySelector(".productImage").src = image;
  
    
