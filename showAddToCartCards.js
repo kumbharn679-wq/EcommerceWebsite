@@ -1,11 +1,11 @@
 import products from "./api/products.json"
-import { fetchQuantityFromCartLS } from "./fetchQuantityFromCartLS";
+import { fetchQuantityFromCartLS } from "./fetchQuantityFromCartLS.js";
 
-import { getCartProductFormLS } from "./getCartProducts"
-import { incrementDecrement } from "./incrementDecrement";
-import { removeProdFromCart } from "./removeProdFromCart";
-import { updateCartProductTotal } from "./updateCartProductTotal";
-import { updateCartValues } from "./updateCartValue";
+import { getCartProductFormLS } from "./getCartProducts.js"
+import { incrementDecrement } from "./incrementDecrement.js";
+import { removeProdFromCart } from "./removeProdFromCart.js";
+import { updateCartProductTotal } from "./updateCartProductTotal.js";
+import { updateCartValues } from "./updateCartValue.js";
 
 let cartProducts = getCartProductFormLS();
 

@@ -1,6 +1,6 @@
-import { getCartProductFormLS } from "./getCartProducts";
-import { showToast } from "./showToast";
-import { updateCartValues } from "./updateCartValue";
+import { getCartProductFormLS } from "./getCartProducts.js";
+import { showToast } from "./showToast.js";
+import { updateCartValues } from "./updateCartValue.js";
 
 export const  removeProdFromCart =(id ) => {
      let cartProducts = getCartProductFormLS();
@@ -13,7 +13,6 @@ export const  removeProdFromCart =(id ) => {
      if(removeDiv){
         removeDiv.remove();
         //Show toast when product added to the cart
-        
         showToast("delete",id);
 
      }

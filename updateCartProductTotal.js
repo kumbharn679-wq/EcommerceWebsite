@@ -1,4 +1,4 @@
-import { getCartProductFormLS } from "./getCartProducts";
+import { getCartProductFormLS } from "./getCartProducts.js";
 
 
 export const updateCartProductTotal = () => {

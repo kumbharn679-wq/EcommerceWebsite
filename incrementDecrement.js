@@ -1,5 +1,5 @@
-import { getCartProductFormLS } from "./getCartProducts";
-import { updateCartProductTotal } from "./updateCartProductTotal";
+import { getCartProductFormLS } from "./getCartProducts.js";
+import { updateCartProductTotal } from "./updateCartProductTotal.js";
 
 export const incrementDecrement =(event,stock,id,price) =>{  
  const currentCardElement = document.querySelector(`#card${id}`); 
